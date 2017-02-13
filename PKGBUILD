@@ -39,6 +39,9 @@ build() {
       --program-prefix=${_target}- \
       --with-local-prefix=/usr/lib/${_target} \
       --target=${_target} --host=${CHOST} --build=${CHOST} \
+      --with-build-sysroot=/usr/${_target} \
+      --with-as=/usr/bin/${_target}-as \
+      --with-ld=/usr/bin/${_target}-ld \
       --enable-languages=c,lto \
       --disable-nls --nfp \
       --disable-shared --disable-threads \
